@@ -10,9 +10,9 @@
     <None Remove="email_templates\election_access_code.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="email_templates\election_access_code.txt">
+    <EmbeddedResource Include="email_templates\election_access_code.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />

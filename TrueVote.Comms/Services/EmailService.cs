@@ -3,6 +3,7 @@
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Mail;
+using System.Reflection;
 
 namespace TrueVote.Comms.Services;
 
@@ -55,7 +56,10 @@ public class EmailService : IEmailService
                 throw new ArgumentException($"Missing required tokens: {string.Join(", ", missingTokens)}");
             }
 
-            var body = await File.ReadAllTextAsync($"email_templates/{config.File}");
+            var assembly = Assembly.GetExecutingAssembly();
+            using var stream = assembly.GetManifestResourceStream($"TrueVote.Comms.email_templates.{config.File}");
+            using var reader = new StreamReader(stream);
+            var body = await reader.ReadToEndAsync();
             foreach (var token in tokens)
             {
                 body = body.Replace($"{{{{{token.Key}}}}}", token.Value);
