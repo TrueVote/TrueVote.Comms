@@ -81,14 +81,9 @@ public class EmailService : IEmailService
             };
             mailMessage.To.Add(to);
 
-            try
-            {
-                await smtpClient.SendMailAsync(mailMessage);
-            }
-            catch (SmtpException ex) when (ex.Message?.Contains("Relay access denied", StringComparison.OrdinalIgnoreCase) ?? false)
-            {
-                _logger.LogInformation("EmailService->Ignoring expected SMTP relay error - email still sent");
-            }
+            await smtpClient.SendMailAsync(mailMessage);
+
+            _logger.LogInformation($"EmailService->Email sent successfully to: {to}");
         }
         catch (Exception ex)
         {
