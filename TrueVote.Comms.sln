@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35424.110
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueVote.Comms", "TrueVote.Comms\TrueVote.Comms.csproj", "{978A61F8-6BB0-4362-AD77-C7646FE4D05B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1990E23C-6AE0-46AE-A4A6-B77032C9DF47}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		CONTRIBUTING.md = CONTRIBUTING.md
+		TrueVote.Comms\.config\dotnet-tools.json = TrueVote.Comms\.config\dotnet-tools.json
+		LICENSE = LICENSE
+		README.md = README.md
+		.github\workflows\truevote-comms-github.yml = .github\workflows\truevote-comms-github.yml
+		.github\workflows\truevote-comms-version.yml = .github\workflows\truevote-comms-version.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{978A61F8-6BB0-4362-AD77-C7646FE4D05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978A61F8-6BB0-4362-AD77-C7646FE4D05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978A61F8-6BB0-4362-AD77-C7646FE4D05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978A61F8-6BB0-4362-AD77-C7646FE4D05B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+<div>
+    <img src="https://truevote.org/wp-content/uploads/2021/05/Truevote-logo-02.png" border="0" width="300" height="66" /> 
+</div>
+<div>
+    <br />
+</div>Thank you for joining us in revolutionizing the future of voting. As one of our first TrueVote Alpha participants, you're helping shape the future of democratic participation.<br />
+<br />Your unique Election Access Code (EAC):<br />
+<br />
+<b>
+    <font size="5">{{EAC}}</font> 
+</b>
+<br />
+<br />To cast your mock ballot in the 2024 Presidential Election:<div>
+    <br />
+</div>
+<div>1. Launch our web App here. This link includes your EAC:&nbsp;<a href="https://app.truevote.org/ballot/{{ELECTIONID}}/{{EAC}}" spellcheck="false">https://app.truevote.org/ballot/{{ELECTIONID}}/{{EAC}}</a> 
+</div>
+<div>2. Fill out your ballot for "Presidential General Election" (all races but one are optional)</div>
+<div>3. Tap / Click 'Submit Ballot'<br />
+    <br />
+    <div>Your ballot will be cryptographically secured and timestamped on the Bitcoin blockchain, just like all future TrueVote elections. While this is a mock election, the underlying technology is very real. We share details in our blog post:&nbsp;<a href="https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27" spellcheck="false">https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27</a> 
+        <br />
+        <br />We welcome your feedback! You can submit it directly through the app (Menu -&gt; About -&gt; Submit Feedback).<br />
+        <br />Thank you for being part of this important milestone.<br />
+        <br />Best regards,<br />
+        <br />The TrueVote Election Admin Team<br />
+        <br />
+    </div>
+</div>
+<div>
+    <font size="2">
+        <b style="">NOTE</b>: Your EAC is your personal "ticket" to vote. Normally this would be issued by an election authority, and not in "clear text" email. This is for demonstration purposes of this Alpha.</font> 
+</div>
+<div>
+    <font size="2">
+        <br />
+    </font>
+</div>
