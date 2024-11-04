@@ -42,7 +42,7 @@ public class AzureServiceBusReceiver : IAzureServiceBusReceiver
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error processing message");
+                _logger.LogError(ex, "AzureServiceBusReceiver->Error processing message");
                 throw; // Let Service Bus handle retry
             }
         };
@@ -60,7 +60,7 @@ public class AzureServiceBusReceiver : IAzureServiceBusReceiver
 
     private Task ExceptionHandler(ProcessErrorEventArgs args)
     {
-        _logger.LogError(args.Exception, "Service Bus processing error");
+        _logger.LogError(args.Exception, "AzureServiceBusReceiver->Service Bus processing error");
         return Task.CompletedTask;
     }
 }

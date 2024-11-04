@@ -22,7 +22,7 @@ public class MessageProcessor : IMessageProcessor
 
     public async Task ProcessMessageAsync(ServiceBusCommsMessage message)
     {
-        _logger.LogInformation($"Processing message for communication event: {message.Metadata["CommunicationEventId"]}");
+        _logger.LogInformation($"MessageProcessor->Processing message for communication event: {message.Metadata["CommunicationEventId"]}");
 
         switch (message.Metadata["Type"])
         {

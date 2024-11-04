@@ -25,7 +25,7 @@ public class CommsHandler : ICommsHandler
     {
         try
         {
-            _logger.LogInformation($"Sending voter access code email for communication event: {communicationEventId}");
+            _logger.LogInformation($"CommsHandler->Sending voter access code email for communication event: {communicationEventId}");
 
             if (string.IsNullOrEmpty(accessCode))
             {
@@ -37,11 +37,11 @@ public class CommsHandler : ICommsHandler
 
             await _apiClient.UpdateCommEventStatus(communicationEventId, "Completed", DateTime.UtcNow);
 
-            _logger.LogInformation($"Successfully sent voter access code email for communication event: {communicationEventId}");
+            _logger.LogInformation($"CommsHandler->Successfully sent voter access code email for communication event: {communicationEventId}");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Error sending voter access code email for communication event: {communicationEventId}");
+            _logger.LogError(ex, $"CommsHandler->Error sending voter access code email for communication event: {communicationEventId}");
 
             await _apiClient.UpdateCommEventStatus(communicationEventId, "Failed", DateTime.UtcNow, ex.Message);
 

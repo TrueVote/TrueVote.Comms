@@ -87,12 +87,12 @@ public class EmailService : IEmailService
             }
             catch (SmtpException ex) when (ex.Message?.Contains("Relay access denied", StringComparison.OrdinalIgnoreCase) ?? false)
             {
-                _logger.LogInformation("Ignoring expected SMTP relay error - email still sent");
+                _logger.LogInformation("EmailService->Ignoring expected SMTP relay error - email still sent");
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, $"Error sending email to {to}");
+            _logger.LogError(ex, $"EmailService->Error sending email to: {to}");
             throw;
         }
     }

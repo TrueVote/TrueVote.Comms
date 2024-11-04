@@ -51,11 +51,11 @@ public class ApiClient : IApiClient
 
             // Log the actual response content for debugging
             var responseContent = await response.Content.ReadAsStringAsync();
-            _logger.LogDebug($"API Response: {response.StatusCode} - {responseContent}");
+            _logger.LogDebug($"ApiClient->API Response: {response.StatusCode} - {responseContent}");
 
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError("Failed to update communication event {CommunicationEventId}. Status: {StatusCode}, Response: {Response}", communicationEventId, response.StatusCode, responseContent);
+                _logger.LogError($"ApiClient->Failed to update communication event {communicationEventId}. Status: {response.StatusCode}, Response: {responseContent}");
 
                 // Don't try to deserialize error response if it's not JSON
                 if (response.Content.Headers.ContentType?.MediaType == "application/json")
@@ -67,11 +67,11 @@ public class ApiClient : IApiClient
                 throw new Exception($"API Error: {response.StatusCode} - {responseContent}");
             }
 
-            _logger.LogDebug($"Successfully updated communication event {communicationEventId} to {status}");
+            _logger.LogDebug($"ApiClient->Successfully updated communication event: {communicationEventId} to: {status}");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Error in UpdateCommEventStatus for communication event: {CommunicationEventId}", communicationEventId);
+            _logger.LogError(ex, $"ApiClient-?Error in UpdateCommEventStatus for communication event: {communicationEventId}");
             throw;
         }
     }
@@ -108,7 +108,7 @@ public class NostrAuthenticationService : IAuthenticationService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to get authentication token");
+            _logger.LogError(ex, "NostrAuthenticationService->Failed to get authentication token");
             throw;
         }
     }
@@ -157,7 +157,7 @@ public class NostrAuthenticationService : IAuthenticationService
         {
             var signInResponse = await response.Content.ReadFromJsonAsync<SignInResponse>() ?? throw new AuthenticationException("Empty response from API");
 
-            _logger.LogDebug($"User authenticated: {signInResponse.User.UserId}");
+            _logger.LogDebug($"NostrAuthenticationService->User authenticated: {signInResponse.User.UserId}");
 
             return signInResponse;
         }

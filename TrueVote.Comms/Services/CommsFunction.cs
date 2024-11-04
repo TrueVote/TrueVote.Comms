@@ -18,7 +18,7 @@ public class CommsFunction
     [Function("ProcessCommsMessage")]
     public async Task Run([ServiceBusTrigger("%ServiceBusCommsQueueName%", Connection = "ServiceBusConnectionString")] ServiceBusCommsMessage message)
     {
-        _logger.LogInformation($"Processing message for communication event: {message.Metadata["CommunicationEventId"]}");
+        _logger.LogInformation($"CommsFunction->Processing message for communication event: {message.Metadata["CommunicationEventId"]}");
 
         await _messageProcessor.ProcessMessageAsync(message);
     }
