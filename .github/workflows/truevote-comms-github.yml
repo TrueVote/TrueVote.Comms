@@ -15,7 +15,7 @@ on:
 env:
   AZURE_FUNCTIONAPP_NAME: TrueVoteComms
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './TrueVote.Comms'
-  DOTNET_VERSION: '8.0.x'
+  DOTNET_VERSION: '9.0.x'
 
 jobs:
   build_and_deploy_job:
