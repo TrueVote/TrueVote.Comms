@@ -36,7 +36,7 @@ public class AzureServiceBusReceiver : IAzureServiceBusReceiver
             {
                 var message = args.Message.Body.ToObjectFromJson<ServiceBusCommsMessage>();
 
-                await _messageProcessor.ProcessMessageAsync(message);
+                await _messageProcessor.ProcessMessageAsync(message!);
 
                 await args.CompleteMessageAsync(args.Message);
             }
