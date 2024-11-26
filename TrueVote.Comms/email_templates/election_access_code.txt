@@ -10,15 +10,15 @@
     <font size="5">{{EAC}}</font> 
 </b>
 <br />
-<br />To cast your mock ballot in the 2024 Presidential Election:<div>
+<br />To cast your ballot:<div>
     <br />
 </div>
 <div>1. Launch our web App here. This link includes your EAC:&nbsp;<a href="https://app.truevote.org/ballot/{{ELECTIONID}}/{{EAC}}" spellcheck="false">https://app.truevote.org/ballot/{{ELECTIONID}}/{{EAC}}</a> 
 </div>
-<div>2. Fill out your ballot for "Presidential General Election" (all races but one are optional)</div>
+<div>2. Fill out your ballot for the election</div>
 <div>3. Tap / Click 'Submit Ballot'<br />
     <br />
-    <div>Your ballot will be cryptographically secured and timestamped on the Bitcoin blockchain, just like all future TrueVote elections. While this is a mock election, the underlying technology is very real. We share details in our blog post:&nbsp;<a href="https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27" spellcheck="false">https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27</a> 
+    <div>Your ballot will be cryptographically secured and timestamped on the Bitcoin blockchain, just like all future TrueVote elections. We share details in our blog post:&nbsp;<a href="https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27" spellcheck="false">https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27</a> 
         <br />
         <br />We welcome your feedback! You can submit it directly through the app (Menu -&gt; About -&gt; Submit Feedback).<br />
         <br />Thank you for being part of this important milestone.<br />
