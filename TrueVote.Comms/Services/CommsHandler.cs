@@ -32,7 +32,7 @@ public class CommsHandler : ICommsHandler
                 throw new ArgumentException("Access code cannot be null or empty", nameof(accessCode));
             }
 
-            await _emailService.SendEmailAsync(email, "Your TrueVote Alpha Access Code - Ready to Vote!", EmailTemplate.VoterAccessCode,
+            await _emailService.SendEmailAsync(email, "Your TrueVote Election Access Code - Ready to Vote!", EmailTemplate.VoterAccessCode,
                 new Dictionary<string, string> { { "EAC", accessCode }, { "ELECTIONID", electionId } });
 
             await _apiClient.UpdateCommEventStatus(communicationEventId, "Completed", DateTime.UtcNow);

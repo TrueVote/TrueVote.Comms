@@ -3,7 +3,7 @@
 </div>
 <div>
     <br />
-</div>Thank you for joining us in revolutionizing the future of voting. As one of our first TrueVote Alpha participants, you're helping shape the future of democratic participation.<br />
+</div>Thank you for joining us in revolutionizing the future of voting. As one of our first TrueVote Election participants, you're helping shape the future of democratic participation.<br />
 <br />Your unique Election Access Code (EAC):<br />
 <br />
 <b>
@@ -18,10 +18,10 @@
 <div>2. Fill out your ballot for the election</div>
 <div>3. Tap / Click 'Submit Ballot'<br />
     <br />
-    <div>Your ballot will be cryptographically secured and timestamped on the Bitcoin blockchain, just like all future TrueVote elections. We share details in our blog post:&nbsp;<a href="https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27" spellcheck="false">https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27</a> 
+    <div>Your ballot will be cryptographically secured and timestamped on the Bitcoin blockchain, just like all TrueVote elections. We shared details of how it works in our blog post announcing our Alpha release:&nbsp;<a href="https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27" spellcheck="false">https://truevote.medium.com/truevote-private-alpha-participate-in-the-2024-election-simulation-b3ebdb7cff27</a> 
         <br />
         <br />We welcome your feedback! You can submit it directly through the app (Menu -&gt; About -&gt; Submit Feedback).<br />
-        <br />Thank you for being part of this important milestone.<br />
+        <br />Thank you for being part of the democratic process.<br />
         <br />Best regards,<br />
         <br />The TrueVote Election Admin Team<br />
         <br />
@@ -29,7 +29,7 @@
 </div>
 <div>
     <font size="2">
-        <b style="">NOTE</b>: Your EAC is your personal "ticket" to vote. Normally this would be issued by an election authority, and not in "clear text" email. This is for demonstration purposes of this Alpha.</font> 
+        <b style="">NOTE</b>: Your EAC is your personal "ticket" to vote. Normally this would be issued by an election authority, and not in "clear text" email. This is for demonstration purposes.</font> 
 </div>
 <div>
     <font size="2">
