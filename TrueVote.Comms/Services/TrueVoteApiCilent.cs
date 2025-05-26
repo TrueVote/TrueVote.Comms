@@ -140,7 +140,7 @@ public class NostrAuthenticationService : IAuthenticationService
 
         var signInEventModel = new SignInEventModel
         {
-            Kind = Api.NostrKind._1,
+            Kind = Api.NostrKind.ShortTextNote,
             CreatedAt = now,
             PubKey = keys.DerivePublicKey().Bech32,
             Signature = signedEvent.Sig,
