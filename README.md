@@ -10,13 +10,15 @@
 
 ## 🌈 Overview
 
-TrueVote.Comms is an implementation of interacting with the TrueVote Voting Suite of Applications via Communication (Email, Notifications, etc.). It's deployed as an Azure Functions project.
+TrueVote.Comms is an implementation of interacting with the TrueVote Voting Suite of Applications via Communication (Email, Notifications, Bots, etc.). It's deployed as an Azure Functions project.
 
-The main technology stack platform is [.NET Core](https://dotnet.microsoft.com/) 8.0.
+The main technology stack platform is [.NET Core](https://dotnet.microsoft.com/) 9.0.
+
+[Telegram](https://telegram.org/) is the first bot implemented. Additional Bot frameworks can be added.
 
 ## 🛠 Prerequisites
 
-* Install Visual Studio 2022 (preview) or later, or Visual Studio Code. Ensure that `$ dotnet --version` is at least 8.0.
+* Install Visual Studio 2022 (preview) or later, or Visual Studio Code. Ensure that `$ dotnet --version` is at least 9.0.
 
 ## ⌨️ Install, Build, and Run the Comms
 
@@ -34,6 +36,8 @@ Get the `ServiceAccountNsec` by registering a user using the [TrueVote App](http
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
     "BaseApiUrl": "https://localhost:7253/api",
+    "TelegramBotKey": "<TelegramBotKey>",
+    "TelegramRuntimeChannel": "TrueVote_Api_Runtime_Channel_Dev",
     "ServiceBusConnectionString": "<ServiceBusConnectionString>",
     "ServiceBusCommsQueueName": "comms-dev",
     "ServiceAccountNsec": "<ServiceAccountNsec>",
@@ -62,9 +66,9 @@ To refresh the models, use `nswag`.
 
 Nswag is installed in this project as a `dotnet tool`.
 
-Local: `$ dotnet nswag swagger2csclient /client-language:csharp /input:https://localhost:7253/swagger/v1/swagger.json /output:TrueVote.Api.cs /namespace:TrueVote.Api`
+Local: `$ dotnet nswag openapi2csclient /input:https://localhost:7253/swagger/v1/swagger.json /output:TrueVote.Api.cs /namespace:TrueVote.Api`
 
-Production: `$ dotnet nswag swagger2csclient /client-language:csharp /input:https://api.truevote.org/swagger/v1/swagger.json /output:TrueVote.Api.cs /namespace:TrueVote.Api`
+Production: `$ dotnet nswag openapi2csclient /input:https://api.truevote.org/swagger/v1/swagger.json /output:TrueVote.Api.cs /namespace:TrueVote.Api`
 
 ## 🎁 Versioning
 
